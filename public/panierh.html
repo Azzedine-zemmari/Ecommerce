@@ -55,6 +55,8 @@
         devisBtn.addEventListener("click",()=>{
             if(devisValidate){
                 parent.location.href = "./Devis.html"
+                localStorage.removeItem("cardProduct")
+                document.getElementById("container").innerHTML = ""
             }
             else{
                 alert("you have to valide the order first")
