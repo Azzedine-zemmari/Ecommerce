@@ -34,11 +34,6 @@ function moin(index){
 
     }
 
-    function deleteProduct(index){
-        const item = data[index]
-        data.splice(item,1)
-        localStorage.setItem("cardProduct",JSON.stringify(data))
-    }
     function validation(){
         const updateData = data.map((item,index)=>({
             ...item,
@@ -73,7 +68,7 @@ data.forEach((element,index) => {
                 <button id="" class="plus bg-orange-600 text-white border rounded px-3 py-1">+</button>
             </div>
             <div class="flex items-center gap-3 mt-4 sm:mt-0">
-                <p id="price-${index}" class="text-black font-bold">$${finalTotal}</p>
+                <p id="price-${index}" class="text-black font-bold">${finalTotal} DH</p>
                 <button onclick="deleteProduct()" class="text-red-600">
                             <img src="image/Trash.png" alt="Supprimer" class="w-6 h-6">
                         </button>
@@ -94,13 +89,6 @@ document.querySelectorAll(".moin").forEach((item,index)=>{
         moin(index)
     })
 })
-document.querySelectorAll(".trash").forEach((item,index)=>{
-    item.addEventListener("click",(event)=>{
-        event.preventDefault()
-        deleteProduct(index)
-    })
-})
-
 // Fonction pour ouvrir et fermer le pop-up du panier
 function openPanier() {
     document.getElementById("panier-tab").classList.remove("translate-x-full");
