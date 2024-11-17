@@ -29,6 +29,23 @@
         #carousel:hover {
             animation-play-state: paused;
         }
+
+        #scroll-container::-webkit-scrollbar {
+        display: none; 
+        }
+
+        #scroll-container {
+        scrollbar-width: none; 
+        }
+        .card a p span {
+        transition : 0.25s ease;
+
+        }
+
+
+        .card a:hover p span {
+        background-color: #fc6735;
+        }
     </style>
 
 </head>
@@ -36,7 +53,6 @@
 <body>
 
     <header>
-        <!-- Panier Content Modal -->
         <div id="panierModal" class="hidden absolute right-0  w-full  top-20  items-center justify-center z-50">
             <div class="  rounded-lg w-full bg-transparent p-6">
                 <iframe src="./panierh.html" class="w-full h-80 rounded-lg" seamless></iframe>
@@ -86,128 +102,179 @@
     </header>
 
     <section style="background-image: url('./image/Abdelmalek/homeImg1.jpg');"
-        class="bg-cover bg-center h-[75vh] md:h-[50vh] lg:h-[85vh] px-6 py-111 sm:px-12 lg:px-24">
-        <div class="pt-32 sm:pt-48 lg:pt-64 pb-12 space-y-8 text-center md:text-left">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold">
-                Cutting-edge electronics <br> designed to keep you ahead.</h1>
-            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200">
-                Experience the Future of Tech </p>
-            <button
-                class="bg-[#FC6735] rounded-md px-8 py-3 text-lg sm:text-xl md:text-2xl  font-semibold shadow-md  mx-auto md:mx-0"><a
-                    href="./Catalogue.html">Explore
-                    Now!</a></button>
-        </div>
-    </section>
+  class="bg-cover bg-center h-[75vh] sm:h-[85vh] md:h-screen px-6 py-111 sm:px-12 lg:px-24">
+  <div class="pt-32 sm:pt-48 lg:pt-64 pb-12 space-y-8 text-center md:text-left">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold">
+          Cutting-edge electronics <br> designed to keep you ahead.</h1>
+      <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200">
+          Experience the Future of Tech </p>
+      <button class="bg-[#FC6735] rounded-md px-8 py-3 text-lg sm:text-xl md:text-2xl  font-semibold shadow-md  mx-auto md:mx-0 hover:scale-110 duration-300 hover:text-white"><a href="Catalogue.html">Explore Now!</a>
+        </button>
+  </div>
+</section>
 
-    <div
-        class="text-center my-8 md:flex md:justify-between md:items-center bg-white text-2xl md:text-3xl lg:text-4xl font-medium lg:px-28">
+
+    <div class="text-center my-8 md:flex md:justify-between md:items-center bg-white text-2xl md:text-3xl lg:text-4xl font-medium lg:px-28">
         <h2 class="py-2">Our Specials</h2>
-        <button
-            class="mt-2 md:mt-0 bg-[#FC6735] rounded-md px-6 py-2 text-base md:text-lg lg:text-xl font-semibold ">See
-            Collection</button>
-    </div>
+        <button class="mt-2 md:mt-0 bg-[#FC6735] rounded-md px-6 py-2 text-base md:text-lg lg:text-xl font-semibold hover:scale-110 duration-300 hover:text-white "><a href="Catalogue.html">See Collection</a></button>
+        </div>
+      <div class="relative bg-[#fc6735] ">
+        <div id="scroll-container" class="flex items-center gap-4 overflow-x-auto bg-[#fc6735] p-4 scroll-smooth lg:mx-32">
+          
+          <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+            <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+              <img src="./image/msi_trident_3.jpg" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+              <h2 class="text-lg font-medium text-black mt-2 flex-grow">MSI Trident 3
+              </h2>
+              <p class="text-[#f77272] font-bold mt-2">
+                10000 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110">View More</span>
+              </p>
+            </a>
+          </div>
+          <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+            <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+              <img src="./image/S24Ultra.jpg" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+              <h2 class="text-lg font-medium text-black mt-2 flex-grow">Samsung Galaxy S24 Ultra
+              </h2>
+              <p class="text-[#f77272] font-bold mt-2">
+                12000 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110
+                ">View More</span>
+              </p>
+            </a>
+          </div>
+          <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+            <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+              <img src="./image/CoolerMasterGA.jpg" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+              <h2 class="text-lg font-medium text-black mt-2 flex-grow">Cooler Master GA2501
+              </h2>
+              <p class="text-[#f77272] font-bold mt-2">
+                2000 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110">View More</span>
+              </p>
+            </a>
+          </div>
+          <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+            <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+              <img src="./image/alienware-aurora-r12.webp" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+              <h2 class="text-lg font-medium text-black mt-2 flex-grow">Alienware Aurora R12
+              </h2>
+              <p class="text-[#f77272] font-bold mt-2">
+                13000 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110">View More</span>
+              </p>
+            </a>
+          </div>
+          <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+            <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+              <img src="./image/logitechProX.jpg" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+              <h2 class="text-lg font-medium text-black mt-2 flex-grow"> 
+                Logitech G Pro X Superlight 2
+              </h2>
+              <p class="text-[#f77272] font-bold mt-2">
+                1500 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110">View More</span>
+              </p>
+            </a>
+          </div>
+          <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+            <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+              <img src="./image/SamsangFamilyHub.jpg" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+              <h2 class="text-lg font-medium text-black mt-2 flex-grow">Samsung Family Hub Refrigerator
+              </h2>
+              <p class="text-[#f77272] font-bold mt-2">
+                3000 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110">View More</span>
+              </p>
+            </a>
+          </div>
+          <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+            <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+              <img src="./image/CambridgeAudio.jpg" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+              <h2 class="text-lg font-medium text-black mt-2 flex-grow">Cambridge Audio Melomania P100
+              </h2>
+              <p class="text-[#f77272] font-bold mt-2">
+                300 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110">View More</span>
+              </p>
+            </a>
+          </div>
+         <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+            <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+              <img src="./image/sonyDualSenseEdge.jpg" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+              <h2 class="text-lg font-medium text-black mt-2 flex-grow">Sony DualSense Edge
+              </h2>
+              <p class="text-[#f77272] font-bold mt-2">
+                600 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110">View More</span>
+              </p>
+            </a>
+          </div>
+          
+      
+        
+      
+        </div>
+      
+        <button onclick="leftscroll()" 
+                class="absolute left-2 top-1/2 -translate-y-1/2 bg-[#fc6735] text-white p-2 rounded shadow">
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm3 5.753l-6.44 5.247 6.44 5.263-.678.737-7.322-6 7.335-6 .665.753z"/></svg>
+        </button>
+        <button onclick="rightscroll()" 
+                class=" absolute right-2 top-1/2 -translate-y-1/2 bg-[#fc6735] text-white p-2 rounded shadow ">
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm-3 5.753l6.44 5.247-6.44 5.263.678.737 7.322-6-7.335-6-.665.753z"/></svg>
+        </button>
+      </div>
+      
+      
+      </div>
+       
 
+
+    </div>
     <div
-        class="bg-[#FC6735] grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 p-4 sm:p-8 lg:px-28 lg:py-5">
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden px-8 py-3">
-            <div class="p-1">
-                <img src="./image/onePlus_!1.jpg" alt="Gaming Monitor"
-                    class=" object-center h-40 sm:h-48 md:h-56 lg:h-64">
-            </div>
-            <div class="px-4">
-                <h3 class="text-lg font-semibold text-gray-700">One plus phone</h3>
-                <p class="text-[#FC6735] font-bold">9000 DH</p>
-            </div>
-        </div>
-
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden px-8 py-3">
-            <div class="p-1">
-                <img src="./image/alienware-aurora-r12.webp" alt="Gaming Monitor" class=" h-40 sm:h-48 md:h-56 lg:h-64">
-            </div>
-            <div class="px-4">
-                <h3 class="text-lg font-semibold text-gray-700">Alien ware aurora</h3>
-                <p class="text-[#FC6735] font-bold">13000 DH</p>
-
-            </div>
-        </div>
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden px-8 py-3">
-            <div class="p-1">
-                <img src="./image/Google-Pixel-7-Pro-blanc-neige-500x500.jpg" alt="Gaming Headset"
-                    class=" h-40 sm:h-48 md:h-56 lg:h-64">
-            </div>
-            <div class="px-4">
-                <h3 class="text-lg font-semibold text-gray-700">Google pixel 7 Pro</h3>
-                <p class="text-[#FC6735] font-bold">9000 DH</p>
-            </div>
-        </div>
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden px-8 py-3">
-            <div class="p-1">
-                <img src="./image/HP_Omen_30L.jpg" alt="Gaming Headset" class=" h-40 sm:h-48 md:h-56 lg:h-64">
-            </div>
-            <div class="px-4">
-                <h3 class="text-lg font-semibold text-gray-700">HP Omen</h3>
-                <p class="text-[#FC6735] font-bold">9000 DH</p>
-            </div>
-        </div>
-
-
-
-    </div>
-    <div class="text-center my-8 md:items-center bg-white text-2xl md:text-3xl lg:text-4xl font-medium lg:px-28">
-        <h2 class="py-2">Testimonials</h2>
-    </div>
-    <section style="background-image: url(./image/Abdelmalek/sectionImgCropped.jpg); background-size:cover;"
-        class="bg-cover bg-center py-12 px-4 sm:px-8 place-content-center lg:h-[80vh]">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 place-content-center	">
-
-            <div style="background-image: url(./image/Abdelmalek/testicard.png);"
-                class="bg-cover shadow-lg rounded-lg p-6">
-                <p class="text-gray-600">"Best gaming accessories ever! Highly recommend."</p>
-                <div class="mt-4 flex items-center">
-                    <img src="./image/Abdelmalek/838-8382821_matt-round-png-round-image-of-man.png" alt="Customer"
-                        class="w-10 h-10 rounded-full">
-                    <div class="ml-4">
-                        <p class="text-gray-800 font-semibold">Donald Duck</p>
-                        <p class="text-gray-500 text-sm">Verified Buyer</p>
-                    </div>
-                </div>
-            </div>
-            <div style="background-image: url(./image/Abdelmalek/testicard.png);"
-                class="bg-cover shadow-lg rounded-lg p-6">
-                <p class="text-gray-600">"Best kitchen electronics ever! Highly recommend."</p>
-                <div class="mt-4 flex items-center">
-                    <img src="./image/Abdelmalek/images (1).jpg" alt="Customer" class="w-10 h-10 rounded-full">
-                    <div class="ml-4">
-                        <p class="text-gray-800 font-semibold">Hillarious Clinton</p>
-                        <p class="text-gray-500 text-sm">Verified Buyer</p>
-                    </div>
-                </div>
-            </div>
-            <div style="background-image: url(./image/Abdelmalek/testicard.png);"
-                class="bg-cover shadow-lg rounded-lg p-6">
-                <p class="text-gray-600">"Best gaming accessories ever! Highly recommend."</p>
-                <div class="mt-4 flex items-center">
-                    <img src="./image/Abdelmalek/838-8382821_matt-round-png-round-image-of-man.png" alt="Customer"
-                        class="w-10 h-10 rounded-full">
-                    <div class="ml-4">
-                        <p class="text-gray-800 font-semibold">John Doe</p>
-                        <p class="text-gray-500 text-sm">Verified Buyer</p>
-                    </div>
-                </div>
-            </div>
-            <div style="background-image: url(./image/Abdelmalek/testicard.png);"
-                class="bg-cover shadow-lg rounded-lg p-6">
-                <p class="text-gray-600">"Best gadgets ever! Highly recommend."</p>
-                <div class="mt-4 flex items-center">
-                    <img src="./image/Abdelmalek/images.jpg" alt="Customer" class="w-10 h-10 rounded-full">
-                    <div class="ml-4">
-                        <p class="text-gray-800 font-semibold">Jack Doe</p>
-                        <p class="text-gray-500 text-sm">Verified Buyer</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+     class="text-center my-8 md:items-center bg-white text-2xl md:text-3xl lg:text-4xl font-medium lg:px-28">
+     <h2 class="py-2">Testimonials</h2>
+     </div>
+     <section style="background-image: url(./image/Abdelmalek/sectionImgCropped.jpg); background-size:cover;" class="bg-cover bg-center py-12 px-4 sm:px-8 place-content-center lg:h-[80vh]">
+         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 place-content-center ">
+ 
+             <div style="background-image: url(./image/Abdelmalek/testicard.png);" class="bg-cover shadow-lg rounded-lg p-6">
+                 <p class="text-gray-600">"Most awesome tech stuff ever! Buy from them or I press the red button."</p>
+                 <div class="mt-4 flex items-center">
+                     <img src="./image/Abdelmalek/trump.jpg" alt="Customer" class="w-10 h-10 rounded-full">
+                     <div class="ml-4">
+                         <p class="text-gray-800 font-semibold">Donald Duck</p>
+                         <p class="text-gray-700 text-sm">Verified Buyer</p>
+                     </div>
+                 </div>
+             </div>
+             <div style="background-image: url(./image/Abdelmalek/testicard.png);" class="bg-cover shadow-lg rounded-lg p-6">
+                 <p class="text-gray-600">"Best kitchen electronics ever! Highly recommend."</p>
+                 <div class="mt-4 flex items-center">
+                     <img src="./image/Abdelmalek/hillary.jpg" alt="Customer" class="w-10 h-10 rounded-full">
+                     <div class="ml-4">
+                         <p class="text-gray-800 font-semibold">Hillarious Clinton</p>
+                         <p class="text-gray-700 text-sm">Verified Buyer</p>
+                     </div>
+                 </div>
+             </div>
+             <div style="background-image: url(./image/Abdelmalek/testicard.png);" class="bg-cover shadow-lg rounded-lg p-6">
+                 <p class="text-gray-600">"Best streaming accessories ever, WOOF WOOF!!"</p>
+                 <div class="mt-4 flex items-center">
+                     <img src="./image/Abdelmalek/speed.webp" alt="Customer" class="w-10 h-10 rounded-full">
+                     <div class="ml-4">
+                         <p class="text-gray-800 font-semibold">IShowSpeed</p>
+                         <p class="text-gray-700 text-sm">Verified Buyer</p>
+                     </div>
+                 </div>
+             </div>
+             <div style="background-image: url(./image/Abdelmalek/testicard.png);" class="bg-cover shadow-lg rounded-lg p-6">
+                 <p class="text-gray-600">"Best electronic gadgets ever! Highly recommend."</p>
+                 <div class="mt-4 flex items-center">
+                     <img src="./image/Abdelmalek/guy.jpeg" alt="Customer" class="w-10 h-10 rounded-full">
+                     <div class="ml-4">
+                         <p class="text-gray-800 font-semibold">Someguy</p>
+                         <p class="text-gray-700 text-sm">Verified Buyer</p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+ 
 
     <section id="partners-section" class="bg-white overflow-hidden">
         <h2 class="text-black text-5xl font-semibold text-center py-16">Our Partners</h2>
@@ -249,7 +316,7 @@
             <div class=" md:mt-8 md:ml-2 pt-8 md:pt-0">
                 <h3 class="text-slate-50 font-bold text-[20px] md:text-[22px] mb-4">Contact Info</h3>
                 <p class="text-white text-[20px]   mb-4"><a href="#">065656565</a></p>
-                <p class="text-white text-[20px]"><a href="#">email@gmail.com</a></p>
+                <p class="text-white text-[18px]"><a href="#">email@gmail.com</a></p>
             </div>
             <div class="md:mt-8 pl-5 md:pl-0 md:ml-5">
                 <h3 class="text-slate-50 font-bold text-[20px] md:text-[22px] mb-4">QuickLinks</h3>
