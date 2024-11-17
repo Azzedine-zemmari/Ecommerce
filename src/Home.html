@@ -8,7 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: "smooth";
     }
 
     @keyframes slider {
@@ -29,6 +29,16 @@
     #carousel:hover {
       animation-play-state: paused;
     }
+
+    .card a p span {
+      transition : 0.25s ease;
+
+    }
+
+    
+    .card a:hover p span {
+      background-color: #fc6735;
+    }
   </style>
 
 </head>
@@ -37,8 +47,8 @@
 
   <header>
     <nav class="bg-black fixed w-full z-20 top-0 start-0">
-        <div class="max-w-screen-xl flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 xl:mx-20">
-            <a href="./home.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <div class="max-w-screen-xl flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 xl:mx-28">
+            <a  href="./home.html" class=" hover:scale-110 duration-300" class="flex items-center space-x-3 ">
                 <img src="./image/Abdelmalek/logo.png" class="h-14 sm:h-20 lg:h-24" alt="Nexio Logo">
             </a>
             <button 
@@ -50,12 +60,12 @@
                         clip-rule="evenodd"></path>
                 </svg>
             </button>
-            <div class="hidden md:flex md:items-center md:space-x-8 rtl:space-x-reverse flex-grow justify-center">
+            <div class="hidden md:flex md:items-center md:space-x-8  flex-grow justify-center">
                 <ul class="flex space-x-8 font-semibold text-2xl text-white">
-                    <li><a href="Home.html" class="hover:text-yellow-600">Home</a></li>
-                    <li><a href="Catalogue.html" class="hover:text-yellow-600">Catalog</a></li>
-                    <li><a href="Apropos.html" class="hover:text-yellow-600">About</a></li>
-                    <li><a href="Contact.html" class="hover:text-yellow-600">Contact</a></li>
+                    <li><a href="Home.html" class="hover:text-[#FC6735]">Home</a></li>
+                    <li><a href="Catalogue.html" class="hover:text-[#FC6735]">Catalog</a></li>
+                    <li><a href="Apropos.html" class="hover:text-[#FC6735]">About</a></li>
+                    <li><a href="Contact.html" class="hover:text-[#FC6735]">Contact</a></li>
                 </ul>
             </div>
             <div class="hidden md:block ml-10">
@@ -64,10 +74,10 @@
         </div>
         <div class="hidden md:hidden" id="navbar-sticky">
             <ul class="flex flex-col items-center p-4 font-semibold text-2xl text-white">
-                <li><a href="Home.html" class="block py-2 hover:text-primary_AL">Home</a></li>
-                <li><a href="Catalogue.html" class="block py-2 hover:text-primary_AL">Catalog</a></li>
-                <li><a href="Apropos.html" class="block py-2 hover:text-primary_AL">About</a></li>
-                <li><a href="Contact.html" class="block py-2 hover:text-primary_AL">Contact</a></li>
+                <li><a href="Home.html" class="block py-2 hover:text-[#FC6735]">Home</a></li>
+                <li><a href="Catalogue.html" class="block py-2 hover:text-[#FC6735]">Catalog</a></li>
+                <li><a href="Apropos.html" class="block py-2 hover:text-[#FC6735]">About</a></li>
+                <li><a href="Contact.html" class="block py-2 hover:text-[#FC6735]">Contact</a></li>
                 <li class="py-2">
                     <a href="#"><img src="./image/Abdelmalek/shopping-cart.png" alt="Shopping Cart" class="w-10 h-10"></a>
                 </li>
@@ -83,58 +93,115 @@
           Cutting-edge electronics <br> designed to keep you ahead.</h1>
       <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200">
           Experience the Future of Tech </p>
-      <button
-          class="bg-[#FC6735] rounded-md px-8 py-3 text-lg sm:text-xl md:text-2xl  font-semibold shadow-md  mx-auto md:mx-0">Explore
-          Now!</button>
+      <button class="bg-[#FC6735] rounded-md px-8 py-3 text-lg sm:text-xl md:text-2xl  font-semibold shadow-md  mx-auto md:mx-0 hover:scale-110 duration-300 hover:text-white"><a href="Catalogue.html">Explore Now!</a>
+        </button>
   </div>
 </section>
 
 <div class="text-center my-8 md:flex md:justify-between md:items-center bg-white text-2xl md:text-3xl lg:text-4xl font-medium lg:px-28">
-<h2 class="py-2">Our Specials</h2>
-<button class="mt-2 md:mt-0 bg-[#FC6735] rounded-md px-6 py-2 text-base md:text-lg lg:text-xl font-semibold ">See Collection</button>
-</div>
+  <h2 class="py-2">Our Specials</h2>
+  <button class="mt-2 md:mt-0 bg-[#FC6735] rounded-md px-6 py-2 text-base md:text-lg lg:text-xl font-semibold hover:scale-110 duration-300 hover:text-white "><a href="Catalogue.html">See Collection</a></button>
+  </div>
+<div class="relative bg-[#fc6735] ">
+  <div id="scroll-container" class="flex items-center gap-4 overflow-x-auto bg-[#fc6735] p-4 scroll-smooth lg:mx-32">
+    
+    <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+      <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+        <img src="/src/image/msi_trident_3.jpg" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+        <h2 class="text-lg font-medium text-black mt-2 flex-grow">MSI Trident 3
+        </h2>
+        <p class="text-[#f77272] font-bold mt-2">
+          10000 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110">View More</span>
+        </p>
+      </a>
+    </div>
+    <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+      <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+        <img src="/src/image/S24Ultra.jpg" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+        <h2 class="text-lg font-medium text-black mt-2 flex-grow">Samsung Galaxy S24 Ultra
+        </h2>
+        <p class="text-[#f77272] font-bold mt-2">
+          12000 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110
+          ">View More</span>
+        </p>
+      </a>
+    </div>
+    <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+      <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+        <img src="/src/image/CoolerMasterGA.jpg" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+        <h2 class="text-lg font-medium text-black mt-2 flex-grow">Cooler Master GA2501
+        </h2>
+        <p class="text-[#f77272] font-bold mt-2">
+          2000 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110">View More</span>
+        </p>
+      </a>
+    </div>
+    <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+      <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+        <img src="/src/image/alienware-aurora-r12.webp" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+        <h2 class="text-lg font-medium text-black mt-2 flex-grow">Alienware Aurora R12
+        </h2>
+        <p class="text-[#f77272] font-bold mt-2">
+          13000 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110">View More</span>
+        </p>
+      </a>
+    </div>
+    <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+      <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+        <img src="/src/image/logitechProX.jpg" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+        <h2 class="text-lg font-medium text-black mt-2 flex-grow"> 
+          Logitech G Pro X Superlight 2
+        </h2>
+        <p class="text-[#f77272] font-bold mt-2">
+          1500 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110">View More</span>
+        </p>
+      </a>
+    </div>
+    <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+      <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+        <img src="/src/image/SamsangFamilyHub.jpg" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+        <h2 class="text-lg font-medium text-black mt-2 flex-grow">Samsung Family Hub Refrigerator
+        </h2>
+        <p class="text-[#f77272] font-bold mt-2">
+          3000 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110">View More</span>
+        </p>
+      </a>
+    </div>
+    <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+      <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+        <img src="/src/image/CambridgeAudio.jpg" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+        <h2 class="text-lg font-medium text-black mt-2 flex-grow">Cambridge Audio Melomania P100
+        </h2>
+        <p class="text-[#f77272] font-bold mt-2">
+          300 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110">View More</span>
+        </p>
+      </a>
+    </div>
+   <div class="card w-[300px] flex-shrink-0 h-[350px] flex flex-col">
+      <a href="Catalogue.html" class="bg-white p-4 rounded-lg border shadow-md hover:border-[#fc6735] h-full flex flex-col">
+        <img src="/src/image/sonyDualSenseEdge.jpg" alt="Product Image" class="w-full h-[200px] object-cover rounded">
+        <h2 class="text-lg font-medium text-black mt-2 flex-grow">Sony DualSense Edge
+        </h2>
+        <p class="text-[#f77272] font-bold mt-2">
+          600 DH <span class="text-white float-right rounded object-contain p-1 hover:scale-110">View More</span>
+        </p>
+      </a>
+    </div>
+    
 
-<div
-class="bg-[#FC6735] grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 p-4 sm:p-8 lg:px-28 lg:py-5">
-<div class="bg-white shadow-lg rounded-lg overflow-hidden px-8 py-3">
-    <div class="p-1">
-        <img src="./image/Abdelmalek/Casque-1.png" alt="Gaming Monitor" class=" h-40 sm:h-48 md:h-56 lg:h-64">
-    </div>
-    <div class="px-4">
-        <h3 class="text-lg font-semibold text-gray-700">Gaming Headset</h3>
-        <p class="text-[#FC6735] font-bold">$400</p>
-    </div>
-</div>
+  
 
-<div class="bg-white shadow-lg rounded-lg overflow-hidden px-8 py-3">
-    <div class="p-1">
-        <img src="./image/Abdelmalek/Casque-1.png" alt="Gaming Monitor" class=" h-40 sm:h-48 md:h-56 lg:h-64">
-    </div>
-    <div class="px-4">
-        <h3 class="text-lg font-semibold text-gray-700">Gaming Headset</h3>
-        <p class="text-[#FC6735] font-bold">$400</p>
-       
-    </div>
-</div>
-<div class="bg-white shadow-lg rounded-lg overflow-hidden px-8 py-3">
-    <div class="p-1">
-        <img src="./image/Abdelmalek/Casque-1.png" alt="Gaming Headset" class=" h-40 sm:h-48 md:h-56 lg:h-64">
-    </div>
-    <div class="px-4">
-        <h3 class="text-lg font-semibold text-gray-700">Gaming Headset</h3>
-        <p class="text-[#FC6735] font-bold">$400</p>
-    </div>
-</div>
-<div class="bg-white shadow-lg rounded-lg overflow-hidden px-8 py-3">
-    <div class="p-1">
-        <img src="./image/Abdelmalek/Casque-1.png" alt="Gaming Headset" class=" h-40 sm:h-48 md:h-56 lg:h-64">
-    </div>
-    <div class="px-4">
-        <h3 class="text-lg font-semibold text-gray-700">Gaming Headset</h3>
-        <p class="text-[#FC6735] font-bold">$400</p>
-    </div>
-</div>
+  </div>
 
+  <button onclick="leftscroll()" 
+          class="absolute left-2 top-1/2 -translate-y-1/2 bg-[#fc6735] text-white p-2 rounded shadow">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm3 5.753l-6.44 5.247 6.44 5.263-.678.737-7.322-6 7.335-6 .665.753z"/></svg>
+  </button>
+  <button onclick="rightscroll()" 
+          class=" absolute right-2 top-1/2 -translate-y-1/2 bg-[#fc6735] text-white p-2 rounded shadow ">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm-3 5.753l6.44 5.247-6.44 5.263.678.737 7.322-6-7.335-6-.665.753z"/></svg>
+  </button>
+</div>
 
 
 </div>
@@ -143,45 +210,45 @@ class="bg-[#FC6735] grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-
     <h2 class="py-2">Testimonials</h2>
     </div>
     <section style="background-image: url(./image/Abdelmalek/sectionImgCropped.jpg); background-size:cover;" class="bg-cover bg-center py-12 px-4 sm:px-8 place-content-center lg:h-[80vh]">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 place-content-center	">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 place-content-center ">
 
             <div style="background-image: url(./image/Abdelmalek/testicard.png);" class="bg-cover shadow-lg rounded-lg p-6">
-                <p class="text-gray-600">"Best gaming accessories ever! Highly recommend."</p>
+                <p class="text-gray-600">"Most awesome tech stuff ever! Buy from them or I press the red button."</p>
                 <div class="mt-4 flex items-center">
-                    <img src="./image/Abdelmalek/12-127379_hillary-clinton-debate-prime-minister-of-antigua-and.png" alt="Customer" class="w-10 h-10 rounded-full">
+                    <img src="./image/Abdelmalek/trump.jpg" alt="Customer" class="w-10 h-10 rounded-full">
                     <div class="ml-4">
                         <p class="text-gray-800 font-semibold">Donald Duck</p>
-                        <p class="text-gray-500 text-sm">Verified Buyer</p>
+                        <p class="text-gray-700 text-sm">Verified Buyer</p>
                     </div>
                 </div>
             </div>
             <div style="background-image: url(./image/Abdelmalek/testicard.png);" class="bg-cover shadow-lg rounded-lg p-6">
                 <p class="text-gray-600">"Best kitchen electronics ever! Highly recommend."</p>
                 <div class="mt-4 flex items-center">
-                    <img src="./image/Abdelmalek/images (1).jpg" alt="Customer" class="w-10 h-10 rounded-full">
+                    <img src="./image/Abdelmalek/hillary.jpg" alt="Customer" class="w-10 h-10 rounded-full">
                     <div class="ml-4">
                         <p class="text-gray-800 font-semibold">Hillarious Clinton</p>
-                        <p class="text-gray-500 text-sm">Verified Buyer</p>
+                        <p class="text-gray-700 text-sm">Verified Buyer</p>
                     </div>
                 </div>
             </div>
             <div style="background-image: url(./image/Abdelmalek/testicard.png);" class="bg-cover shadow-lg rounded-lg p-6">
-                <p class="text-gray-600">"Best gaming accessories ever! Highly recommend."</p>
+                <p class="text-gray-600">"Best streaming accessories ever, WOOF WOOF!!"</p>
                 <div class="mt-4 flex items-center">
-                    <img src="./image/Abdelmalek/838-8382821_matt-round-png-round-image-of-man.png" alt="Customer" class="w-10 h-10 rounded-full">
+                    <img src="./image/Abdelmalek/speed.webp" alt="Customer" class="w-10 h-10 rounded-full">
                     <div class="ml-4">
-                        <p class="text-gray-800 font-semibold">John Doe</p>
-                        <p class="text-gray-500 text-sm">Verified Buyer</p>
+                        <p class="text-gray-800 font-semibold">IShowSpeed</p>
+                        <p class="text-gray-700 text-sm">Verified Buyer</p>
                     </div>
                 </div>
             </div>
             <div style="background-image: url(./image/Abdelmalek/testicard.png);" class="bg-cover shadow-lg rounded-lg p-6">
-                <p class="text-gray-600">"Best gadgets ever! Highly recommend."</p>
+                <p class="text-gray-600">"Best electronic gadgets ever! Highly recommend."</p>
                 <div class="mt-4 flex items-center">
-                    <img src="./image/Abdelmalek/images.jpg" alt="Customer" class="w-10 h-10 rounded-full">
+                    <img src="./image/Abdelmalek/guy.jpeg" alt="Customer" class="w-10 h-10 rounded-full">
                     <div class="ml-4">
-                        <p class="text-gray-800 font-semibold">Jack Doe</p>
-                        <p class="text-gray-500 text-sm">Verified Buyer</p>
+                        <p class="text-gray-800 font-semibold">Someguy</p>
+                        <p class="text-gray-700 text-sm">Verified Buyer</p>
                     </div>
                 </div>
             </div>
@@ -222,26 +289,26 @@ class="bg-[#FC6735] grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-
     <div class="mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-gray-400 text-lg font-medium">
             <div class="flex mb-4 md:mb-0">
         <a href="./image/Abdelmalek/home.html">
-          <img src="./image/Abdelmalek/logo.png" class="h-28 w-48" alt="Nexio Logo">
+          <img class=" hover:scale-110 duration-300" src="./image/Abdelmalek/logo.png" class="h-28 w-48" alt="Nexio Logo">
         </a>
       </div>
-        <div>
+        <div class="pt-8">
         <h4 class="text-white font-bold text-xl mb-2">Contact Info</h4>
-        <a href="#" class="block hover:underline text-sm">+212 420420420</a>
-        <a href="#" class="block hover:underline text-sm">Email@youcode.com</a>
+        <a href="#" class="block hover:underline text-md">+212 420420420</a>
+        <a href="#" class="block hover:underline text-[15px]">Email@youcode.com</a>
       </div>
-      <div>
+      <div class="p-8 ml-4">
         <h4 class="text-white font-bold text-xl mb-2">Quick Links</h4>
-        <a href="#" class="block hover:underline text-sm">Home</a>
-        <a href="#" class="block hover:underline text-sm">Catalog</a>
+        <a href="Home.html" class="block hover:underline text-md">Home</a>
+        <a href="Catalogue.html" class="block hover:underline text-md">Catalog</a>
       </div>
-      <div>
+      <div class="pt-8">
         <h4 class="text-white font-bold text-xl mb-2">Support</h4>
-        <a href="#" class="block hover:underline text-sm">Shipping</a>
-        <a href="#" class="block hover:underline text-sm">Refund Policy</a>
+        <a href="#" class="block hover:underline text-md">Shipping</a>
+        <a href="#" class="block hover:underline text-md">Refund Policy</a>
       </div>
     </div>
-    <div id="socials-icons" class="flex justify-center gap-6 mt-8">
+    <div id="socials-icons" class="flex justify-center gap-6 mt-5">
       <a href="#"><img src="./image/Abdelmalek/Facebook.png" alt="Facebook" class="h-6 w-6 md:h-12 md:w-12"></a>
       <a href="#"><img src="./image/Abdelmalek/Instagram.png" alt="Instagram" class="h-6 w-6 md:h-12 md:w-12"></a>
       <a href="#"><img src="./image/Abdelmalek/Twitch.png" alt="Twitch" class="h-6 w-6 md:h-12 md:w-12"></a>
