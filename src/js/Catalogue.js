@@ -5,22 +5,23 @@ displayData(carts, 1);
 document.getElementById("page1").addEventListener("click", () => displayData(carts, 1));
 document.getElementById("page2").addEventListener("click", () => displayData(carts, 2));
 
-    function displayData(data, paginate) {
-        let card = document.getElementById("card");
-    
-        if (data.length > 0) {  
-            let from, to;
-            if (paginate == 1) {
-                from = 1;
-                to = 13;
-                document.getElementById("page1").style.color = "#FC6736";
-                document.getElementById("page2").style.color = "black";
-            } else if (paginate == 2) {
-                from = 13;
-                to = 18;
-                document.getElementById("page2").style.color = "#FC6736";
-                document.getElementById("page1").style.color = "black";
-            }
+function displayData(data, paginate) {
+    const card = document.getElementById("card");
+
+    if (data.length > 0) {
+        let from, to;
+
+        if (paginate === 1) {
+            from = 0;
+            to = 12;
+            document.getElementById("page1").style.color = "#FC6736";
+            document.getElementById("page2").style.color = "black";
+        } else if (paginate == 2) {
+            from = 12;
+            to = data.length;
+            document.getElementById("page2").style.color = "#FC6736";
+            document.getElementById("page1").style.color = "black";
+        }
 
         card.innerHTML = "";
 
