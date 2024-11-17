@@ -8,7 +8,7 @@ document.getElementById("page2").addEventListener("click", () => displayData(car
     function displayData(data, paginate) {
         let card = document.getElementById("card");
     
-        if (data.length > 0) {
+        if (data.length > 0) {  
             let from, to;
             if (paginate == 1) {
                 from = 1;
