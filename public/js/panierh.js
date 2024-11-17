@@ -25,9 +25,9 @@ function moin(index){
     if(counter[index]>0){
         counter[index]--
         finalTotal = data[index].price * counter[index]
-        price.innerText = finalTotal
+        price.innerText = finalTotal + " DH"
         if(counter[index] == 1){
-            price.innerText = data[index].price
+            price.innerText = data[index].price + " DH"
         }
     }
     count.innerText = counter[index]
