@@ -56,7 +56,7 @@
             if(devisValidate){
                 parent.location.href = "./Devis.html"
                 localStorage.removeItem("cardProduct")
-                document.getElementById("panier-tab").innerHTML = ""
+                document.getElementById("panier-tab").style.display = "none"
             }
             else{
                 alert("you have to valide the order first")
