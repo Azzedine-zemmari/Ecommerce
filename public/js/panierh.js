@@ -13,7 +13,7 @@ function add(index){
         console.log(counter[index]);
         
         finalTotal = data[index].price * counter[index]
-        price.innerText = finalTotal
+        price.innerText = finalTotal + " DH"
         
         
     }
