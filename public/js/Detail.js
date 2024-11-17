@@ -495,15 +495,14 @@ if (obj.categorie == "electromenager") {
     processeur.textContent = obj.litrage
 }
 const AddToCart = document.getElementById("AddToCart")
-let exist = false
 AddToCart.addEventListener("click", () => {
-    if(exist){
-        alert("product already exists in card");
+    let existsId = donner.map(product => product.id)
+    if (existsId.includes(obj.id)) {
+        alert("product already exists")
         return
     }
-    else{
-        exist = true;
-        donner.push({ id:obj.id,titre: obj.name, image: obj.image, price: updatePrice() })
+    else {
+        donner.push({ id: obj.id, titre: obj.name, image: obj.image, price: updatePrice() })
         localStorage.setItem("cardProduct", JSON.stringify(donner))
     }
 })
