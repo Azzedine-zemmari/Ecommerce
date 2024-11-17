@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>panier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div id="panier-tab"
+        class="fixed top-0 right-0 z-50 h-full w-full sm:w-[400px] md:w-[600px] bg-red-500 flex flex-col p-4">
+        <!-- <div class="flex justify-end mb-4">
+            <button type="button" onclick="closeCart()" class="text-black text-6xl mt-[-25px]">&times;</button>
+        </div> -->
+
+        <!-- Contenu du panier -->
+        <div id="container" class="flex-grow overflow-y-auto space-y-4 mb-6">
+            <!-- Exemples de cartes d'articles -->
+            <!-- <div class="item flex gap-4 bg-white rounded-lg p-4 shadow-md">
+                <img src="image_placeholder.jpg" alt="Produit" class="w-16 h-16 sm:w-20 sm:h-20 rounded-md object-cover">
+                <div class="flex flex-col justify-between w-full">
+                    <h1 class="text-lg font-bold text-gray-800">Nom du produit</h1>
+                    <div class="flex items-center justify-between mt-2">
+                        <div class="flex items-center gap-2">
+                            <button onclick="moin()" class="bg-orange-500 text-black px-2 py-1 rounded">-</button>
+                            <p class="text-black font-bold">1</p>
+                            <button onclick="add()" class="bg-orange-500 text-black px-2 py-1 rounded">+</button>
+                        </div>
+                        <p class="text-black font-bold">9.99 €</p>
+                        <button onclick="deleteProduct()" class="text-red-600">
+                            <img src="trash_icon.png" alt="Supprimer" class="w-6 h-6">
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div id="c-btns" class="flex justify-center mt-4 space-x-2 gap-8 mb-10">
+            <a id="devisBtn" href=""
+                class="w-32 text-center  bg-orange-600 text-white font-medium py-4 rounded-lg">Devis</a>
+            <a id="order-btn" href="#" class="w-32 text-center  bg-orange-600 text-white font-medium py-4 rounded-lg">Order</a>
+        </div>
+    </div>
+    <script>
+        const devisBtn = document.getElementById("devisBtn")
+        const orderBtn = document.getElementById("order-btn")
+        let devisValidate = false
+        orderBtn.addEventListener("click",()=>{
+            devisValidate = true
+            alert("order validated successufly , Now you can access devis page ")
+            
+        })
+        devisBtn.addEventListener("click",()=>{
+            if(devisValidate){
+                parent.location.href = "./Devis.html"
+                localStorage.removeItem("cardProduct")
+                document.getElementById("panier-tab").style.display = "none"
+            }
+            else{
+                alert("you have to valide the order first")
+            }
+        })
+    </script>
+    <script type="module" src="./js/panierh.js"></script>
+</body>

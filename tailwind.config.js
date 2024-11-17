@@ -14,6 +14,7 @@ module.exports = {
         secondary_AL: '#E95555',
         accent: '',
       },
+      
     },
   },
   plugins : [],

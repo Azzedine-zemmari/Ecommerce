@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apropos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes slider {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        #carousel {
+            display: flex;
+            gap: 24px;
+            animation: slider 25s linear infinite;
+            width: 200%;
+        }
+
+        #carousel:hover {
+            animation-play-state: paused;
+        }
+
+        .logo {
+            height: 4rem;
+        }
+    </style>
+</head>
+
+<body class="">
+    <!-- Panier Content Modal -->
+    <div id="panierModal" class="hidden absolute right-0  w-full  top-20  items-center justify-center z-50">
+        <div class="  rounded-lg w-full bg-transparent p-6">
+            <iframe src="./panierh.html" class="w-full h-80 rounded-lg" seamless></iframe>
+            <button onclick="closeModal()"
+                class="absolute top-4 right-8 hover:text-red-600 text-xl font-bold">&times;</button>
+        </div>
+    </div>
+    <nav class="bg-black fixed w-full z-20 top-0 start-0">
+        <div class="max-w-screen-xl flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 xl:mx-20">
+            <a href="./home.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./image/Nexio.png" class="h-14 sm:h-20 lg:h-24" alt="Nexio Logo">
+            </a>
+            <button class="inline-flex items-center p-2 text-white rounded-lg md:hidden ml-auto"
+                onclick="document.getElementById('navbar-sticky').classList.toggle('hidden')">
+                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5h14a1 1 0 100-2H3a1 1 0 100 2zM3 10h14a1 1 0 100-2H3a1 1 0 100 2zM3 15h14a1 1 0 100-2H3a1 1 0 100 2z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div class="hidden md:flex md:items-center md:space-x-8 rtl:space-x-reverse flex-grow justify-center">
+                <ul class="flex space-x-12 font-semibold text-xl text-white">
+                    <li><a href="Home.html" class="hover:text-[#FC6736]">Home</a></li>
+                    <li><a href="Catalogue.html" class="hover:text-[#FC6736]">Catalog</a></li>
+                    <li><a href="Apropos.html" class="hover:text-[#FC6736]">About</a></li>
+                    <li><a href="Contact.html" class="hover:text-[#FC6736]">Contact</a></li>
+                </ul>
+            </div>
+            <div class="hidden md:block ml-10">
+                <a id="panier" href="#"><img src="./image/shopping.png" alt="Shopping Cart" class="w-9 h-9"></a>
+            </div>
+        </div>
+        <div class="hidden md:hidden" id="navbar-sticky">
+            <ul class="flex flex-col items-center p-4 font-semibold text-2xl text-white">
+                <li><a href="Home.html" class="block py-2 hover:text-[#FC6736]">Home</a></li>
+                <li><a href="Catalogue.html" class="block py-2 hover:text-[#FC6736]">Catalog</a></li>
+                <li><a href="Apropos.html" class="block py-2 hover:text-[#FC6736]">About</a></li>
+                <li><a href="Contact.html" class="block py-2 hover:text-[#FC6736]">Contact</a></li>
+                <li class="py-2">
+                    <a id="panierPhone" href="#"><img src="./image/shopping.png" alt="Shopping Cart"
+                            class="w-10 h-10"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="pt-24 md:pt-40 relative h-52 md:h-full flex-grow">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat  bg-[url('image/clavier.png')]"></div>
+
+        <div class="text-white px-14 lg:py-44 md:py-20 relative md:ml-10  lg:ml-40  md:px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-lg md:text-6xl  lg:text-8xl font-normal mb-1 md:mb-4">About Nexio</h2>
+            <p class="text-[13px] sm:text-lg lg:text-4xl md:text-3xl mb-6">We bring you the technology <br>of the future
+                today</p>
+        </div>
+    </main>
+
+    <section class="mb-12 md:mb-36 px-4">
+        <div class="flex justify-center mt-7 md:mt-12">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-center">
+                about <span class="text-orange-500">us</span>
+            </h1>
+        </div>
+        <div
+            class="flex flex-col-reverse lg:flex-row items-center lg:justify-around mt-2 lg:mt-16 space-y-6 lg:space-y-0  lg:space-x-8">
+            <p
+                class="  w-80 md:w-[500px]  max-w-xl  font-bold  text-lg md:text-3xl lg:w-[525px] lg:text-[30px] leading-2 mt-7  sm:leading-8 md:leading-9 md:mt-5  lg:text-left">
+                Nexio is an innovative electronics company focused on delivering high-quality, user-centered technology
+                for modern living. Competing with industry leaders, we are building a brand recognized for quality,
+                reliability, and sustainability, with a vision for an accessible, connected future.
+            </p>
+            <img src="image/digital 3 1.png" alt="computer"
+                class="w-full max-w-xs sm:max-w-sm md:max-w-lg lg:w-[408px] md:h-72 lg:h-[324px] h-44 object-cover rounded-md">
+        </div>
+    </section>
+    <section class="flex flex-col justify-center gap-14 mb-12 px-4">
+        <div class="flex justify-around ">
+            <div class="flex justify-center">
+                <h1 class="font-semibold text-center rounded-md text-xs sm:text-xs md:text-base lg:text-lg py-1 px-2 md:px-3 sm:py-[2px] sm:px-[5px] bg-orange-500">Mission</h1>
+            </div>
+              <div class="flex justify-center">
+                <h1 class="font-semibold text-center rounded-md text-xs sm:text-xs md:text-base lg:text-lg py-1 px-2 md:px-3  sm:py-[2px] sm:px-[5px] bg-orange-500">Vision</h1>
+            </div>
+            <div class="flex justify-center">
+                <h1 class="font-semibold text-center rounded-md text-xs sm:text-xs md:text-base lg:text-lg py-1 px-2 md:px-3  sm:py-[2px] sm:px-[5px] bg-orange-500">Valeurs</h1>
+            </div>
+        </div>
+          <div class="flex flex-row justify-around  gap-1">
+            <div class="relative">
+                <div class="absolute bottom-2 right-[2px] md:bottom-3 md:right-3  bg-[#E95555] w-[110px] h-[100px] sm:w-[140px] sm:h-[120px] md:w-[220px] md:h-[220px] lg:w-[338.12px] lg:h-[298.25px] flex justify-center rounded-md items-center">
+                    <p class="text-[8px] sm:text-xs md:text-base lg:text-2xl font-semibold w-28 sm:w-36 md:w-48 lg:w-80 text-center">
+                        Provide innovative and <br>accessible electronic <br>solutions that simplify <br> and enrich the everyday <br> lives of our users.
+                    </p>
+                </div>
+                <div class="bg-[#FBC3B1]  w-[110px] h-[100px] sm:w-[140px] sm:h-[120px] md:w-[220px] md:h-[220px]  lg:w-[338.12px] lg:h-[298.25px] flex justify-center rounded-md items-center"></div>
+    
+            </div>
+            <div class="relative">
+                <div class="absolute bottom-2 right-[2px] md:bottom-3 md:right-3 bg-[#E95555] w-[110px] h-[100px] sm:w-[140px] sm:h-[120px] md:w-[220px] md:h-[220px]  lg:w-[338.12px] lg:h-[298.25px] flex justify-center rounded-md items-center">
+                    <p class="text-[8px] sm:text-xs md:text-base lg:text-2xl font-semibold w-[103px] sm:w-36 md:w-48 lg:w-80 text-center">
+                   To become a global<br> leader in technology,<br> recognized for the quality <br> and durability of our <br>products, while inspiring <br> a more connected and <br>responsible future.
+                  </p>
+                </div>
+                <div class="bg-[#FBC3B1]   w-[110px] h-[100px] sm:w-[140px] sm:h-[120px] md:w-[220px] md:h-[220px] lg:w-[338.12px] lg:h-[298.25px] flex justify-center rounded-md items-center"></div>
+            </div>
+            <div class="relative">
+                <div class="absolute bottom-2 right-[2px] md:bottom-3 md:right-3  bg-[#E95555]  w-[110px] h-[100px] sm:w-[140px] sm:h-[120px] md:w-[220px] md:h-[220px]  lg:w-[338.12px] lg:h-[298.25px] flex justify-center rounded-md items-center">
+                    <p class="text-[8px] sm:text-xs md:text-base lg:text-2xl font-semibold w-28 sm:w-36 md:w-48 lg:w-80 text-center">
+                      Innovation, quality, <br> sustainability, and <br> customer focus: the core <br> values that guide Nexio in <br> meeting the needs and <br> expectations of its <br> clients.                  </p>
+                </div>
+                <div class="bg-[#FBC3B1]  w-[110px] h-[100px] sm:w-[140px] sm:h-[120px] md:w-[220px] md:h-[220px]  lg:w-[338.12px] lg:h-[298.25px] flex justify-center rounded-md items-center"></div>
+            </div>
+        </div>
+      
+  </section>
+
+    <section id="partners-section" class="bg-white overflow-hidden mb-12">
+        <h2 class="text-black text-3xl sm:text-4xl md:text-5xl font-semibold text-center pb-9 md:py-16">Our Partners
+        </h2>
+        <div id="carousel" class="flex  space-x-6 py-4 px-4 sm:space-x-8">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/msi.png" alt="MSI">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/sony.png" alt="Sony">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/snapdragon.png" alt="Snapdragon">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/lg.png" alt="LG">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/amd.png" alt="AMD">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/Huawei.png" alt="Huawei">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/xiaomi.png" alt="Xiaomi">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/dell1.png" alt="Dell">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/apple.png" alt="Apple">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/razer.png" alt="Razer">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/asus.png" alt="Asus">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/msi.png" alt="MSI">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/sony.png" alt="Sony">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/snapdragon.png" alt="Snapdragon">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/lg.png" alt="LG">
+
+
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/amd.png" alt="AMD">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/Huawei.png" alt="Huawei">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/xiaomi.png" alt="Xiaomi">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/dell1.png" alt="Dell">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/apple.png" alt="Apple">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/razer.png" alt="Razer">
+            <img class="logo w-24 sm:w-32 md:w-40" src="image/asus.png" alt="Asus">
+        </div>
+    </section>
+    <section class="px-4">
+        <h1 class="text-center text-4xl font-bold mb-8">FAQ</h1>
+        <div>
+            <div class="bg-[#FBC3B1] mx-auto sm:mx-8 md:mx-16 lg:mx-32 rounded-[10px] mb-3 cursor-pointer"
+                onclick="Showanswer(this)">
+                <div class="flex py-3 items-center">
+                    <img src="image/trianglepng.png" alt="triangle" class="mr-3 w-8 sm:w-10 md:w-12">
+                    <h4 class="text-sm sm:text-lg md:text-xl font-semibold">What are Nexio’s warranty and return
+                        policies?</h4>
+                </div>
+                <p class="hidden mt-2 pl-12 pb-4 text-sm md:text-lg text-gray-700">All our products come with a minimum
+                    one-year warranty that covers manufacturing defects. Products that are defective or do not meet
+                    expectations can be returned within 30 days of purchase, provided the receipt is available and the
+                    product is in good condition.</p>
+            </div>
+            <div class="bg-[#FBC3B1] mx-auto sm:mx-8 md:mx-16 lg:mx-32 rounded-[10px] mb-3 cursor-pointer"
+                onclick="Showanswer(this)">
+                <div class="flex py-3 items-center">
+                    <img src="image/trianglepng.png" alt="triangle" class="mr-3 w-8 sm:w-10 md:w-12">
+                    <h4 class="text-sm sm:text-lg md:text-xl font-semibold">What payment methods does Nexio accept?</h4>
+                </div>
+                <p class="hidden mt-2 pl-12 pb-4 text-sm md:text-lg text-gray-700">Nexio accepts all major credit cards,
+                    PayPal, and bank transfers, with options for installment payments on selected products.</p>
+            </div>
+            <div class="bg-[#FBC3B1] mx-auto sm:mx-8 md:mx-16 lg:mx-32 rounded-[10px] mb-3 cursor-pointer"
+                onclick="Showanswer(this)">
+                <div class="flex py-3 items-center">
+                    <img src="image/trianglepng.png" alt="triangle" class="mr-3 w-8 sm:w-10 md:w-12">
+                    <h4 class="text-sm sm:text-lg md:text-xl font-semibold">How do I contact customer support?</h4>
+                </div>
+                <p class="hidden mt-2 pl-12 pb-4 text-sm md:text-lg text-gray-700">You can reach our customer support
+                    team via our website’s live chat, email at support@nexio.com, or phone at (123) 456-7890.</p>
+            </div>
+            <div class="bg-[#FBC3B1] mx-auto sm:mx-8 md:mx-16 lg:mx-32 rounded-[10px] cursor-pointer"
+                onclick="Showanswer(this)">
+                <div class="flex py-3 items-center">
+                    <img src="image/trianglepng.png" alt="triangle" class="mr-3 w-8 sm:w-10 md:w-12">
+                    <h4 class="text-sm sm:text-lg md:text-xl font-semibold">Does Nexio offer any discounts or
+                        promotions?</h4>
+                </div>
+                <p class="hidden mt-2 pl-12 pb-4 text-sm md:text-lg text-gray-700">Yes, we regularly offer seasonal
+                    discounts and promotions. Check our website or subscribe to our newsletter for the latest offers.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class=" flex-grow pt-14 sm:pt-20 z-30">
+        <div class=" bg-cover bg-center bg-no-repeat bg-[url('image/info.jpg')] md:h-96">
+            <div class="text-center ">
+                <p class="text-white text-lg md:text-4xl font-bold pt-4 md:pt-6 ">Contact Us for more Informations</p>
+                <a href="Contact.html"><button
+                        class="text-white bg-orange-600 font-semibold text-sm md:text-2xl rounded-lg w-16 md:w-32 h-8 md:h-11 mt-10 mb-20 md:mt-28 transition-transform transform hover:scale-110 hover:bg-amber-800 ">Click</button></a>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-black px-6 md:px-20 py-8">
+        <div class="mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-gray-400 text-lg ">
+            <div class="flex  ">
+                <a href="./image/Abdelmalek/home.html">
+                    <img src="image/Nexio.png" class="h-24 w-48" alt="Nexio Logo">
+                </a>
+            </div>
+            <div class=" md:mt-8 md:ml-2 pt-8 md:pt-0">
+                <h3 class="text-slate-50 font-bold text-[20px] md:text-[22px] mb-4">Contact Info</h3>
+                <p class="text-white text-[20px]   mb-4"><a href="#">065656565</a></p>
+                <p class="text-white text-[20px]"><a href="#">email@gmail.com</a></p>
+            </div>
+            <div class="md:mt-8 pl-5 md:pl-0 md:ml-5">
+                <h3 class="text-slate-50 font-bold text-[20px] md:text-[22px] mb-4">QuickLinks</h3>
+                <p class="text-white text-[20px] mb-4"><a href="Home.html">Home</a></p>
+                <p class="text-white text-[20px] mb-4"><a href="Catalogue.html">Catalog</a></p>
+            </div>
+            <div class=" md:mt-8 ">
+                <h3 class="text-slate-50 font-bold text-[20px] md:text-[22px] mb-4">Support</h3>
+                <p class="text-white  mb-4"><a href="#">Shipping</a></p>
+                <p class="text-white text-[20px]"><a href="#">Refund Policy</a></p>
+            </div>
+        </div>
+        <div id="socials-icons" class="flex justify-center gap-6 mt-8">
+            <a href="#"><img src="./image/Abdelmalek/Facebook.png" alt="Facebook" class="h-6 w-6 md:h-12 md:w-12"></a>
+            <a href="#"><img src="./image/Abdelmalek/Instagram.png" alt="Instagram" class="h-6 w-6 md:h-12 md:w-12"></a>
+            <a href="#"><img src="./image/Abdelmalek/Twitch.png" alt="Twitert" class="h-6 w-6 md:h-12 md:w-12"></a>
+            <a href="#"><img src="./image/Abdelmalek/Discord.png" alt="Discord" class="h-6 w-6 md:h-12 md:w-12"></a>
+        </div>
+        <div class="flex justify-center mt-6">
+            <h3 class="text-white font-normal text-[13px] md:text-2xl text-center">© 2024 Codebenders. All rights
+                reserved | Nexio</h3>
+        </div>
+    </footer>
+
+    <script>
+        const panier = document.getElementById("panier")
+        const panierPhone = document.getElementById("panierPhone")
+        const panierModal = document.getElementById("panierModal")
+        panier.addEventListener("click", (event) => {
+            event.preventDefault();
+            panierModal.classList.remove("hidden");
+        });
+        panierPhone.addEventListener("click", (event) => {
+            event.preventDefault();
+            panierModal.classList.remove("hidden");
+        })
+
+        function closeModal() {
+            panierModal.classList.add("hidden");
+        }
+    </script>
+    <script src="./js/Apropos.js"></script>
+</body>
+
+</html>

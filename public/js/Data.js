@@ -159,7 +159,7 @@ const carts = [
         memoire:["125GB","250GB","500GB"],
         processeur:null,
         price:9000,
-        image:"./image/googlePixel.jpg"
+        image:"./image/Google-Pixel-7-Pro-blanc-neige-500x500.jpg"
     },
     {
         id:12,

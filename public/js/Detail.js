@@ -7,7 +7,7 @@ console.log(obj)
 // prendre le prix
 let price = obj.price
 const pricecontent = document.getElementById("price")
-pricecontent.innerText = price
+pricecontent.innerText = price + " DH"
 let finalMemoriePrice = 0, finalCartPrice = 0, finalProcessurePrice = 0, finalDpiPrice = 0, finalColorPrice = 0, finalRefreshRate = 0, finalPrice = 0, finalManeteColor = 0;
 //afficher image
 const image = document.getElementById("image");
@@ -25,7 +25,7 @@ description.textContent = obj.description
 let donner = JSON.parse(localStorage.getItem("cardProduct")) || [];
 function updatePrice() {
     finalPrice = price + finalMemoriePrice + finalProcessurePrice + finalCartPrice + finalColorPrice + finalDpiPrice + finalManeteColor + finalRefreshRate;
-    pricecontent.innerText = finalPrice
+    pricecontent.innerText = finalPrice + " DH"
     return finalPrice
 }
 const cartegraphic = document.getElementById("carteTTILE")
@@ -82,7 +82,7 @@ if (obj.categorie == "pc") {
         }
         updatePrice()
     })
-    if (obj.graphics != null) {
+    if (obj.graphics != null) { 
         createRaDioButton(Object.keys(obj.graphics), "graphic", graphic)
     }
     else if (obj.graphics == null) {
@@ -496,8 +496,15 @@ if (obj.categorie == "electromenager") {
 }
 const AddToCart = document.getElementById("AddToCart")
 AddToCart.addEventListener("click", () => {
-    donner.push({ titre: obj.name, image: obj.image, price: updatePrice() })
-    localStorage.setItem("cardProduct", JSON.stringify(donner))
+    let existsId = donner.map(product => product.id)
+    if (existsId.includes(obj.id)) {
+        alert("product already exists")
+        return;
+    }
+    else {
+        donner.push({ id: obj.id, titre: obj.name, image: obj.image, price: updatePrice() })
+        localStorage.setItem("cardProduct", JSON.stringify(donner))
+    }
 })
 
 

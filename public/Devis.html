@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVIS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-customOrange {
+            background-color: #FC6736;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="max-w-4xl mx-auto bg-white shadow-lg p-4 sm:p-8">
+        <a href="home.html" class="">
+            <img src="./image/Nexio.png" class="h-28" alt="Nexio Logo">
+        </a>
+        <div class="text-center mb-8">
+            <h1 class="text-2xl font-bold mt-4">Devis n°:<span id="devisNumber">2024-11-00001</span></h1>
+        </div>
+
+        <div class="flex flex-row justify-between mb-6 text-sm">
+            <div class=" sm:text-left ">
+                <p class="font-bold text-center">Nexio</p>
+                <p>19 Rue, Safi Morocco</p>
+                <p>20160</p>
+                <p>+212560897412</p>
+                <p>contact@Nexio.com</p>
+            </div>
+            <div class="flex flex-col justify-center text-right mt-4 text-sm mt-0">
+                <p><span class="font-bold text-red-500">Date de devis :</span><span id="today"></span></p>
+                <p><span class="font-bold text-red-500">Lieu de devis :</span> Safi-Maroc</p>
+            </div>
+        </div>
+
+        <div class="overflow-x-auto mb-6">
+            <table class="min-w-full border border-gray-300 text-sm">
+                <thead>
+                    <tr class="bg-red-500 text-white">
+                        <th class="py-2 px-2 sm:px-4 border">N°</th>
+                        <th class="py-2 px-2 sm:px-4 border">Produit</th>
+                        <th class="py-2 px-2 sm:px-4 border">Prix</th>
+                        <th class="py-2 px-2 sm:px-4 border">Qty</th>
+                        <th class="py-2 px-2 sm:px-4 border">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="w-1/2 ml-auto text-sm">
+            <div class="flex justify-between font-bold border p-2 bg-red-100">
+                <span>Sous-Total:</span>
+                <span id="subtotal">0.00DH</span>
+            </div>
+
+            <div class="flex justify-between mt-1 font-bold border p-2">
+                <span>Tax 20%:</span>
+                <span id="tax">0.00DH</span>
+            </div>
+
+            <div class="flex justify-between mt-1 font-bold border p-2 bg-red-500">
+                <span class="text-white">Total:</span>
+                <span class="text-white" id="total">0.00DH</span>
+            </div>
+        </div>
+
+        <div class="print:hidden flex  sm:flex-row justify-between items-center gap-4 mt-8">
+          <button id="Checkout" class="bg-customOrange text-white py-1 px-4 sm:px-6 sm:py-2 rounded w-full sm:w-auto">Checkout</button>
+          <button id="printpg" onclick="window.print()" class="bg-customOrange text-white py-1 px-4 sm:px-6 sm:py-2 rounded w-full sm:w-auto">Print</button>
+          <button id="exitButton" class="bg-customOrange text-white py-1 px-4 sm:px-6 sm:py-2 rounded w-full sm:w-auto">Exit</button>
+        </div>
+    </div>
+    <!-- module Checkout -->
+    <!-- Module Checkout -->
+    <div id="confirmationMessage" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded shadow-lg p-4 sm:p-6 w-[90%] max-w-sm sm:max-w-md lg:max-w-2xl h-[70vh] overflow-y-auto">
+            <h2 class="text-lg sm:text-xl font-bold mb-4 text-center">Confirmation de la commande</h2>
+            <div class="overflow-x-auto mb-4">
+                <table class="min-w-full border border-gray-300 text-sm">
+                    <thead>
+                        <tr class="bg-red-500 text-white">
+                            <th class="py-2 px-4 border">N°</th>
+                            <th class="py-2 px-4 border">Produit</th>
+                            <th class="py-2 px-4 border">Prix</th>
+                            <th class="py-2 px-4 border">Quantité</th>
+                            <th class="py-2 px-4 border">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="confirmationTableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="flex justify-between font-bold text-lg mb-4">
+                <span>Total :</span>
+                <span id="confirmationTotal">0.00DH</span>
+            </div>
+            <div class="flex justify-end gap-4">
+                <button id="closeConfirmation"
+                    class="bg-gray-500 hover:bg-gray-400 text-white py-2 px-4 rounded">Close</button>
+                <button id="payNow" class="bg-customOrange hover:bg-orange-300 text-white py-2 px-4 rounded">Pay
+                    Now</button>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    <script type="module" src="./js/Devis.js" >
+        
+
+    </script>
+</body>
+
+</html>
