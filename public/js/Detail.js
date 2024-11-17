@@ -498,8 +498,12 @@ const AddToCart = document.getElementById("AddToCart")
 AddToCart.addEventListener("click", () => {
     let existsId = donner.map(product => product.id)
     if (existsId.includes(obj.id)) {
-        alert("product already exists")
-        return
+        let devisProduct = localStorage.getItem("valide") //get data from localStorage of devis
+        let productInDevis = devisProduct.find(product => product.id === obj.id)
+        if(productInDevis){
+            productInDevis.quantity +=1
+            return
+        }
     }
     else {
         donner.push({ id: obj.id, titre: obj.name, image: obj.image, price: updatePrice() })
