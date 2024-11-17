@@ -34,7 +34,7 @@ function displayData(data, paginate) {
             productCard.innerHTML = `
                 <div class="flex flex-col items-center mb-2">
                     <img src="${product.image}" alt="Product Image" class="w-full h-40 object-contain rounded mb-4">
-                    <a href='/src/Detail.html?id=${product.id}'><h3 class="font-bold text-md mb-2" style='height: 50px; display: flex; align-items: center;'>${product.name}</h3></a>
+                    <a href='../Detail.html?id=${product.id}'><h3 class="font-bold text-md mb-2" style='height: 50px; display: flex; align-items: center;'>${product.name}</h3></a>
                     <p class="font-bold text-xl mb-6 mt-2" style="color: #FC6736;">${product.price} DH</p>
                 </div>
                 <div class="flex justify-center items-center space-x-3 p-2">
@@ -43,7 +43,7 @@ function displayData(data, paginate) {
                         class="text-white px-1 lg:text-lg py-1 text-xs rounded-full h-7 flex items-center add-to-cart-btn">
                         Add Cart
                     </button>
-                    <a href='../src/Detail.html?id=${product.id}'><button style="background-color: #FC6736;" class="text-white px-1 lg:text-lg py-1 text-xs rounded-full h-7 flex items-center">Customize</button></a>
+                    <a href='../Detail.html?id=${product.id}'><button style="background-color: #FC6736;" class="text-white px-1 lg:text-lg py-1 text-xs rounded-full h-7 flex items-center">Customize</button></a>
                 </div>
             `;
 
