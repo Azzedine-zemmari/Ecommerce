@@ -60,9 +60,16 @@ function displayData(data, paginate) {
 function addToCart(product) {
     try {
         let cardProduct = JSON.parse(localStorage.getItem("cardProduct")) || []; 
-        console.log("test product ",product);
-        cardProduct.push({id:product.id,titre:product.name,image:product.image,price:product.price}); 
-        localStorage.setItem("cardProduct", JSON.stringify(cardProduct)); 
+        let existsId = cardProduct.map(item=>item.id)
+        if(existsId.includes(product.id)){
+            alert("product already exists")
+            return
+        }
+        else{
+            console.log("test product ",product);
+            cardProduct.push({id:product.id,titre:product.name,image:product.image,price:product.price}); 
+            localStorage.setItem("cardProduct", JSON.stringify(cardProduct)); 
+        }
     } catch (error) {
         console.error("Erreur lors de l'ajout au panier :", error);
         alert("Une erreur s'est produite lors de l'ajout au panier.");
